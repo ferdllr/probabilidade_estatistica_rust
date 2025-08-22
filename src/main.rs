@@ -43,4 +43,8 @@ fn main() {
     let amp_array2 = [5.0, 6.0, 7.0, 8.0, 9.0];
     println!("1a lista: amplitude: {:?}", Calc::amplitude(&amp_array1));
     println!("2a lista: amplitude: {:?}", Calc::amplitude(&amp_array2));
+
+    println!("===========");
+    println!("--variancia--");
+    println!("variancia das notas: {:?}", Calc::variancia(&amp_array2));
 }

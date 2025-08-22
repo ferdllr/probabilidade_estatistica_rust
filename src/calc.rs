@@ -3,6 +3,20 @@ use std::collections::HashMap;
 pub struct Calc;
 
 impl Calc {
+    pub fn variancia(dados: &[f64]) -> Option<f64> {
+        if dados.is_empty() {
+            return None;
+        }
+        let media = Calc::media_aritimetica(dados);
+        let mut desv: Vec<f64> = Vec::new();
+        for &dado in dados {
+            let mut res = dado - media;
+            res *= res;
+            desv.push(res);
+        }
+        Some(Calc::media_aritimetica(&desv))
+    }
+
     pub fn amplitude(dados: &[f64]) -> Option<f64> {
         if dados.is_empty() {
             return None;
